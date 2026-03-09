@@ -4,18 +4,7 @@
 using namespace std;
 
 long long solution(int a, int b) {
-    if (a > b){
-        int tmp = a;
-        a = b;
-        b = tmp;
-    }
-    
     long long answer = 0;
-    
-    while (a != b){
-        answer += a;
-        a++;
-    }
-    answer += a;
+    answer = (long long)(a+b) * (abs(a-b) + 1)/2;
     return answer;
 }
